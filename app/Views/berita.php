@@ -25,8 +25,8 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg main-nav">
     <div class="container">
-      <a class="navbar-brand" href="#" style="color: black;"><img src="./assets/images/logo_tanggamus-remove.png" alt=""
-          width="35" height="40" /> Pekon Kejayaan</a>
+      <a class="navbar-brand" href="<?= base_url("")?>" style="color: black;"><img
+          src="./assets/images/logo_tanggamus-remove.png" alt="" width="35" height="40" /> Pekon Kejayaan</a>
 
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -66,44 +66,44 @@
             
           ?>
       <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card mt-3" style="width: 18rem;">
           <img src="./assets/images/<?= $artikel['gambar'];?>" class="card-img-top img-fluid"
             style=" width:  300px;height: 300px; object-fit: cover; border: 5px solid white; border-radius: 10px;"
             alt="...">
           <div class="card-body">
-            <p class="card-title"><?= $artikel['judul'];?></p>
+            <p class="card-title" style="font-size: 14px; text-align: center; font-weight: bold;">
+              <?= $artikel['judul'];?></p>
             <button href="<?= $artikel['id'];?>" type="button" class="btn btn-primary ms-5" data-bs-toggle="modal"
               data-bs-target="#exampleModal<?= $artikel['id'];?>">
-              Launch demo modal
+              Lanjutkan Membaca
             </button>
-           
           </div>
-          
-      </div>
-      <div class="modal fade " id="exampleModal<?= $artikel['id'];?>" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content modalku justify-content-center">
-                  <div class="modal-header">
-                    <h5 class="modal-title text-center" id="exampleModalLabel"><?= $artikel['judul'];?>
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-sm-12 text-center"> <img src="./assets/images/<?= $artikel['gambar'];?>"
-                          class="card-img-top img-fluid w-25 m-auto" alt="..."></div>
-                      <div class="col-12 justify-content-center"> <?= $artikel['isi'];?></div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                  </div>
+        </div>
+        <div class="modal fade " id="exampleModal<?= $artikel['id'];?>" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content modalku justify-content-center">
+              <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel"><?= $artikel['judul'];?>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-sm-12 text-center"> <img src="./assets/images/<?= $artikel['gambar'];?>"
+                      class="card-img-top img-fluid w-25 m-auto"
+                      style=" width:  300px;height: 300px; object-fit: cover; border: 5px solid white; border-radius: 10px;"
+                      alt="..."></div>
+                  <div class="col-12 justify-content-center"> <?= $artikel['isi'];?></div>
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
       <?php 
     endforeach;?>
     </div>
@@ -115,41 +115,37 @@
   <!-- Artikel Tutup -->
   <!-- footer -->
   <div class="container-fluid footer">
-    <div class="row">
-      <div class="col-sm-3">
-        <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
-        <p>binarcarrental@gmail.com</p>
-        <p>081-233-334-808</p>
+    <div class="row ">
+      <div class="col-sm-3 mt-3">
+        <p>Pekon Kejayaan</p>
+        <p>kejayaan@gmail.com</p>
+        <p>082238603481</p>
       </div>
-      <div class="col-sm-3">
-        <p>Our services</p>
-        <p>Why Us</p>
-        <p>timonial</p>
-        <p>FAQ</p>
+      <div class="col-sm-3 mt-3">
+        <p>Beranda</p>
+        <p>Profil</p>
+        <p>Berita</p>
       </div>
-      <div class="col-sm-3">
-        <p>Connect with us</p>
+      <div class="col-sm-3 mt-3">
+        <p>Connect with us :</p>
         <ul class="ps-0">
           <li>
-            <i class="fa fa-facebook"></i>
+            <button type="button" class="btn border-primary"><i class="fa fa-facebook"></i></button>
           </li>
           <li>
-            <img src="./assets/images/icon_instagram.png" width="32px" height="32px" alt="" />
+            <button type="button" class="btn border-primary "><i class="fa fa-instagram"></i></button>
           </li>
           <li>
-            <img src="./assets/images/icon_twitter.png" width="32px" height="32px" alt="" />
+            <button type="button" class="btn border-primary "><i class="fa fa-twitter"></i></button>
           </li>
           <li>
-            <img src="./assets/images/icon_mail.png" width="32px" height="32px" alt="" />
-          </li>
-          <li>
-            <img src="./assets/images/icon_twitch.png" width="32px" height="32px" alt="" />
+            <button type="button" class="btn border-primary "><i class="fa fa-envelope"></i></button>
           </li>
         </ul>
       </div>
-      <div class="col-3">
-        <p>Copyright Binar 2022</p>
-        <img src="./assets/images/Rectangle 74.png" width="100px" height="34px" alt="" />
+      <div class="col-sm-3 mt-3">
+        <p>KKN Unila Periode II Tahun 2022</p>
+        <img src="./assets/images/logo_tanggamus-remove.png" width="35px" height="40px" alt="" />
       </div>
     </div>
   </div>
