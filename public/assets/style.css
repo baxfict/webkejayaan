@@ -78,6 +78,12 @@ h2 {
   margin-left: 100px;
 }
 
+.modalku {
+  width: 1000px;
+  /* margin: auto; */
+  margin-left: -250px;
+}
+
 /* .main-content-1 h1 {
   float: left;
 }
