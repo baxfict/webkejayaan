@@ -94,11 +94,11 @@
             alt="...">
           <div class="card-body">
             <h5 class="card-title"><?= $artikel['judul'];?></h5>
-            <button href="/artikel/<?= $artikel['slug'];?>" type="button" class="btn btn-primary ms-5"
-              data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button href="/artikel/<?= $artikel['id'];?>" type="button" class="btn btn-primary ms-5"
+              data-bs-toggle="modal" data-bs-target="#exampleModal<?= $artikel['id'];?>">
               Launch demo modal
             </button>
-            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade " id="exampleModal<?= $artikel['id'];?>" tabindex="-1" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content modalku justify-content-center">
